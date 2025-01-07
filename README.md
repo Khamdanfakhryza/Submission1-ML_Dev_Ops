@@ -1,5 +1,4 @@
-# Submission1-ML_Dev_Ops
-# Submission 1: Machine Learning Pipeline - Human Stress Prediction
+# Submission1-ML_Dev_Ops-Prediksi Tingkat Stres pada Manusia
 Nama: Khamdan Annas Fakhryza
 
 Username dicoding: khamdan-fakhryza
