@@ -8,7 +8,7 @@ import tensorflow_transform as tft
 from tensorflow.keras import layers
 import os
 # tensorflow_hub is causing import errors, try commenting it out
-# import tensorflow_hub as hub 
+# import tensorflow_hub as hub
 from tfx.components.trainer.fn_args_utils import FnArgs
 
 LABEL_KEY = "label"
@@ -59,10 +59,10 @@ def model_builder() :
     #Machine Learning Model
    #Machine Learning Model
     inputs = tf.keras.Input(shape=(1,), name = transformed_name(FEATURE_KEY), dtype = tf.string)
-    
+
     # Instead of tf.reshape, use tf.keras.layers.Reshape
-    reshaped_narrative = tf.keras.layers.Reshape((-1,))(inputs) 
-    
+    reshaped_narrative = tf.keras.layers.Reshape((-1,))(inputs)
+
     x = vectorize_layer(reshaped_narrative)
     x = layers.Embedding(VOCAB_SIZE, embedding_dim, name = "embedding")(x)
     x = layers.GlobalAveragePooling1D()(x)
@@ -106,7 +106,7 @@ def run_fn(fn_args : FnArgs) -> None :
 
     # Update filepath to end with .keras
     model_filepath = os.path.join(fn_args.serving_model_dir, 'model.keras')
-    
+
     #Callback untuk EarlyStopping dan ModelCheckpoint
     es = tf.keras.callbacks.EarlyStopping(monitor='val_binary_accuracy', mode='max', verbose=1, patience=10)
     mc = tf.keras.callbacks.ModelCheckpoint(model_filepath, monitor='val_binary_accuracy', mode='max', verbose=1, save_best_only=True)
@@ -146,8 +146,8 @@ def run_fn(fn_args : FnArgs) -> None :
                                 )
         )
     }
-    
+
     #Menyimpan model pada serving_model_dir
-    model.save(os.path.join(fn_args.serving_model_dir, 'model.keras'))  
+    model.save(os.path.join(fn_args.serving_model_dir, 'model.keras'))
     # and save the signatures separately if needed
     tf.saved_model.save(model, os.path.join(fn_args.serving_model_dir), signatures=signatures)
