@@ -4,7 +4,7 @@ Nama: Khamdan Annas Fakhryza
 
 Username dicoding: khamdan-fakhryza
 
-![human resources problems]([https://user-images.githubusercontent.com/58927608/232183728-df31ce54-b58c-4163-a563-5df9d3daf167.jpg](https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1617766026/m1tpdhifol4xqwxquds4.jpg))
+![human resources problems] (https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1617766026/m1tpdhifol4xqwxquds4.jpg)
 
 [Sumber Gambar](https://drive.google.com/file/d/1A0N8LXDorJVSPVdc6oLDNy2OMyGcPyi2/view?usp=drive_link)
 
